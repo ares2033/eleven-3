@@ -1,9 +1,12 @@
-import { ElevenGlobe } from "../animations/eleven-globe";
-import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
 import { Tomorrow, Poppins } from "next/font/google";
+import { ElevenGlobe } from "../animations/eleven-globe";
 
 const tomorrow = Tomorrow({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
@@ -12,16 +15,29 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-[calc(100dvh-5rem)] w-full overflow-hidden bg-black px-6 md:px-24"
+      className="relative container mx-auto flex h-dvh w-full justify-center"
     >
-      {/* Background Globe */}
-      <div className="absolute inset-0 z-0">
-        <ElevenGlobe />
+      <div className="relative flex size-full flex-col items-center justify-start px-6 pt-24 pb-40 md:justify-center md:px-24 md:pt-8 md:pb-60">
+        <span
+          className={`${poppins.className} text-center text-5xl leading-none font-semibold whitespace-pre-wrap text-white sm:text-7xl md:text-[8rem] xl:text-[14rem]`}
+        >
+          elevenhats
+        </span>
+        <span
+          className={`w-full text-center font-light text-white ${tomorrow.className}`}
+        >
+          La prima boutique del software in Italia. <br />
+          L&apos;alleato per uno sviluppo conveniente, rapido e di qualità.
+        </span>
+        <div className="absolute top-0 right-0 bottom-0 left-0 z-10 flex items-center justify-center overflow-hidden">
+          <ElevenGlobe />
+        </div>
+        <div className="absolute bottom-0 z-40 h-32 w-full bg-gradient-to-t from-black to-black/0"></div>
       </div>
 
-      {/* Content Grid */}
+      {/* Content Grid 
       <div className="pointer-events-none relative z-10 grid h-full grid-cols-1 content-end md:grid-cols-2">
-        {/* Left Column - Main Title and Button */}
+        {/* Left Column - Main Title and Button *
         <div className="flex flex-col justify-end md:justify-end md:pb-12">
           <div className="space-y-8 md:space-y-12">
             <h1
@@ -44,7 +60,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column - Description */}
+        {/* Right Column - Description 
         <div className="pointer-events-none flex h-min pt-12 pb-12 align-bottom md:h-full md:items-end md:justify-end md:pt-0">
           <div className="max-w-sm">
             <h2
@@ -55,7 +71,7 @@ export default function Hero() {
             </h2>
           </div>
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 }

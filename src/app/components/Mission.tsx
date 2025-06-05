@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { HoverArrowLink } from "./hover-arrow-link";
 import { Poppins } from "next/font/google";
-import RotatingText, {
-  type RotatingTextRef,
-} from "@/TextAnimations/RotatingText/RotatingText";
+import { WordRotate } from "@/components/magicui/word-rotate";
+import {
+  AnimatedSpan,
+  Terminal,
+  TypingAnimation,
+} from "@/components/magicui/terminal";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,109 +14,88 @@ const poppins = Poppins({
 });
 
 export function Mission() {
-  const [isArrowVisible, setIsArrowVisible] = useState(false);
-  const [isTextVisible, setIsTextVisible] = useState(false);
-  const arrowRef = useRef<HTMLDivElement>(null);
-  const rotatingTextRef = useRef<RotatingTextRef>(null);
-  const textObserverRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsArrowVisible(!!entry && entry.isIntersecting);
-      },
-      {
-        threshold: 0.3,
-      },
-    );
-
-    const textObserver = new IntersectionObserver(
-      ([entry]) => {
-        const isVisible = !!entry && entry.isIntersecting;
-        setIsTextVisible(isVisible);
-
-        if (isVisible && rotatingTextRef.current) {
-          rotatingTextRef.current.reset();
-        }
-      },
-      {
-        threshold: 0.3,
-      },
-    );
-
-    const currentArrowRef = arrowRef.current;
-    const currentTextRef = textObserverRef.current;
-
-    if (currentArrowRef) {
-      observer.observe(currentArrowRef);
-    }
-
-    if (currentTextRef) {
-      textObserver.observe(currentTextRef);
-    }
-
-    return () => {
-      if (currentArrowRef) {
-        observer.unobserve(currentArrowRef);
-      }
-      if (currentTextRef) {
-        textObserver.unobserve(currentTextRef);
-      }
-    };
-  }, []);
-
   return (
-    <section
-      id="mission"
-      className="relative flex h-full flex-col items-center justify-center overflow-x-hidden bg-white py-24 sm:px-8 md:h-screen md:px-16 md:py-8 lg:px-24"
-    >
-      {/* Text Container - Full width on mobile, positioned for desktop */}
-      <div className="flex w-full flex-col items-center md:flex-row md:items-center md:justify-between">
-        <h2
-          className={`w-full text-center text-3xl font-semibold text-black md:text-left md:text-7xl lg:text-8xl ${poppins.className}`}
-        >
-          <span
-            className="flex flex-wrap items-center justify-center md:justify-start"
-            ref={textObserverRef}
-          >
-            eleven
-            <RotatingText
-              ref={rotatingTextRef}
-              texts={["pay", "board", "auth", " times better!", "hats"]}
-              staggerFrom={"last"}
-              initial={{ y: "100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-120%" }}
-              loop={false}
-              auto={isTextVisible}
-              staggerDuration={0.025}
-              splitLevelClassName="overflow-hidden "
-              transition={{
-                type: "tween",
-                ease: [0.77, 0, 0.175, 1],
-                duration: 0.6,
-              }}
-              rotationInterval={2000}
-            />
-          </span>
-        </h2>
-
-        {/* Arrow Container - Hidden on mobile, visible on desktop */}
-        <div className="hidden md:block">
-          <HoverArrowLink text="Scopri chi siamo" href="/chi-siamo" />
-        </div>
-      </div>
-
-      {/* Arrow Container for Mobile - Below text, with intersection observer */}
+    <section className="container mx-auto grid h-full grid-cols-5 gap-8 px-8 py-16 md:gap-4">
       <div
-        ref={arrowRef}
-        className="relative mt-24 flex h-32 w-full justify-center md:hidden"
+        className={`${poppins.className} col-span-5 flex flex-col items-start justify-center gap-2 px-4 text-7xl font-semibold text-white md:px-16 lg:col-span-3`}
       >
-        <HoverArrowLink
-          text="Scopri chi siamo"
-          href="/chi-siamo"
-          isMobileVisible={isArrowVisible}
-        />
+        <span className="flex items-center text-2xl font-semibold md:text-5xl">
+          eleven
+          <WordRotate
+            words={["pay", "dash", "auth", `${"\u00A0"}times better!`, "hats"]}
+          />
+        </span>
+        <span className="text-lg font-light md:text-4xl">
+          Un ecosistema di Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Suspendisse molestie nisl ut augue dictum, vitae fringilla mi
+          pharetra. Phasellus eu cursus ex. Fusce id elit ac ante sodales
+          vehicula id eu lorem. Vivamus velit risus, eleifend sed aliquet eu,
+          sollicitudin vitae nisl.{" "}
+        </span>
+      </div>
+      <div className="col-span-5 flex items-center justify-center lg:col-span-2">
+        <Terminal>
+          <TypingAnimation duration={1} className="text-muted-foreground">
+            &gt; pnpm dlx elevenhats@latest init
+          </TypingAnimation>
+
+          <AnimatedSpan delay={1500} className="text-green-500">
+            <span>✔ Servizio.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={3000} className="text-green-500">
+            <span>✔ Servizio.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={4500} className="text-green-500">
+            <span>✔ Servizio.</span>
+          </AnimatedSpan>
+
+          <TypingAnimation delay={6000} duration={1} className="text-green-500">
+            █████████████████████████ 100% completed
+          </TypingAnimation>
+
+          <AnimatedSpan delay={8000} className="text-green-500">
+            <span>✔ Servizio.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={9000} className="text-green-500">
+            <span>✔ Servizio.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={10500} className="text-green-500">
+            <span>✔ Servizio.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={12000} className="text-green-500">
+            <span>✔ Servizio</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={13500} className="text-green-500">
+            <span>✔ Servizio.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={15000} className="text-blue-500">
+            <span>ℹ Updated 1 file:</span>
+            <span className="pl-2">- lib/elevenhats.ts</span>
+          </AnimatedSpan>
+
+          <TypingAnimation
+            delay={16500}
+            duration={1}
+            className="text-muted-foreground"
+          >
+            Success! Project initialization completed.
+          </TypingAnimation>
+
+          <TypingAnimation
+            delay={24000}
+            duration={1}
+            className="text-muted-foreground"
+          >
+            You may now contact us.
+          </TypingAnimation>
+        </Terminal>
       </div>
     </section>
   );

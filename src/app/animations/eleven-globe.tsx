@@ -397,9 +397,9 @@ export function ElevenGlobe() {
   ];
 
   return (
-    <div className="relative flex h-full w-full flex-row items-center justify-center bg-black md:h-auto">
-      <div className="relative mx-auto h-full w-full overflow-hidden px-4 md:h-[64rem]">
-        <div className="absolute z-10 h-72 w-full not-md:left-0 md:-top-36 md:-right-72 md:h-full">
+    <div className="relative flex h-full w-full flex-row items-center justify-center md:h-auto">
+      <div className="relative mx-auto h-[64rem] w-full overflow-hidden md:px-4">
+        <div className="absolute top-4/8 z-10 h-full w-full overflow-hidden md:h-full">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

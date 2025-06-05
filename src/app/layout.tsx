@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import { TRPCReactProvider } from "@/trpc/react";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import { DotPattern } from "@/components/magicui/dot-pattern";
 
 export const metadata: Metadata = {
   // Basic
@@ -91,6 +92,14 @@ export default function RootLayout({
       <body className="bg-black">
         <Header />
         <TRPCReactProvider>
+          <DotPattern
+            className="text-neutral-300 dark:text-neutral-700"
+            width={32}
+            height={32}
+            cr={1}
+            opacity={0.4}
+            glow={true}
+          />
           {children}
 
           <Contact />
