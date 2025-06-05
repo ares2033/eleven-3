@@ -15,7 +15,6 @@ import {
 } from "lucide-react";
 import { Poppins } from "next/font/google";
 import { useState } from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 const poppins = Poppins({
@@ -24,7 +23,6 @@ const poppins = Poppins({
 });
 
 export default function Solutions() {
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState(false);
 
   const progetti = [
@@ -193,7 +191,7 @@ export default function Solutions() {
 
       {/* Projects Grid */}
       <div className="mx-auto grid gap-8 px-4 md:grid-cols-2 lg:grid-cols-3">
-        {progetti.map((progetto, index) => (
+        {progetti.map((progetto) => (
           <div key={progetto.id} className="group relative">
             <div className="flex h-full flex-col justify-between rounded-2xl border border-white bg-black p-8">
               {/* Project Header */}

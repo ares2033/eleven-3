@@ -2,15 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Code, Database, Shield } from "lucide-react";
-import { Tomorrow, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-const tomorrow = Tomorrow({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 const poppins = Poppins({
   subsets: ["latin"],
