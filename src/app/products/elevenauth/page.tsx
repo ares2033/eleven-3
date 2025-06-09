@@ -18,6 +18,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useState } from "react";
 
 const tomorrow = Tomorrow({
   subsets: ["latin"],
@@ -25,8 +26,9 @@ const tomorrow = Tomorrow({
 });
 
 export default function ElevenAuth() {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <section className="bg-black">
+    <section className="container mx-auto px-4 py-16">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="w-full py-24">
@@ -451,38 +453,39 @@ export default function ElevenAuth() {
 
         {/* CTA Section */}
         <div className="mb-16">
-          <div className="rounded-2xl border border-white p-8 text-center md:p-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+          <div className="p-8 text-center md:p-16">
+            <h2
+              className={`mb-6 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
             >
-              <h2
-                className={`mb-6 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
-              >
-                Pronto a iniziare?
-              </h2>
-              <p className={`mx-auto mb-8 max-w-2xl text-white/70`}>
-                Contattaci per discutere il tuo progetto e ricevere un
-                preventivo personalizzato. Il primo colloquio di consulenza è
-                gratuito e senza impegno.
-              </p>
-              <div className="flex flex-col justify-center gap-4 sm:flex-row">
-                <Link href="#contact">
+              Pronto a iniziare?
+            </h2>
+            <p className={`mx-auto mb-8 max-w-2xl text-white/70`}>
+              Contattaci per discutere il tuo progetto e ricevere un preventivo
+              personalizzato. Il primo colloquio di consulenza è gratuito e
+              senza impegno.
+            </p>
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Link href="#contact">
+                <Button
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  size={"lg"}
+                  className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:text-white`}
+                >
+                  Richiedi preventivo
                   <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    animate={{ rotate: isHovered ? 45 : 0 }}
+                    transition={{ duration: 0.3 }}
                   >
-                    <Button
-                      className={`rounded-full bg-white font-light text-black hover:bg-white/90 ${tomorrow.className}`}
-                    >
-                      Richiedi preventivo
-                      <ArrowUpRight viewBox="4 4 16 16" strokeWidth={1} />
-                    </Button>
+                    <ArrowUpRight
+                      viewBox="4 4 16 16"
+                      strokeWidth={1}
+                      className="text-white"
+                    />
                   </motion.div>
-                </Link>
-              </div>
-            </motion.div>
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
