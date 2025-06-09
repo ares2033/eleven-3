@@ -2,15 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Code, Database, Shield } from "lucide-react";
-import { Poppins } from "next/font/google";
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export default function Products() {
   const [isHovered, setIsHovered] = useState(false);
@@ -102,12 +96,12 @@ export default function Products() {
       <div className="w-full py-24">
         <div>
           <h1
-            className={`text-center text-4xl leading-tight font-semibold text-white md:text-5xl lg:text-6xl ${poppins.className}`}
+            className={`text-center text-4xl leading-tight font-semibold text-white md:text-5xl lg:text-6xl`}
           >
             I nostri prodotti
           </h1>
           <p
-            className={`mx-auto mt-6 max-w-4xl text-center text-xl text-white/70 md:text-2xl ${poppins.className}`}
+            className={`mx-auto mt-6 max-w-4xl text-center text-xl text-white/70 md:text-2xl`}
           >
             Soluzioni software innovative progettate per semplificare e
             potenziare il tuo business digitale.
@@ -116,7 +110,7 @@ export default function Products() {
       </div>
 
       {/* Products Grid */}
-      <div className="space-y-20 px-4 lg:px-48">
+      <div className="space-y-20 px-4">
         {products.map((product, index) => (
           <div
             key={product.id}
@@ -136,29 +130,21 @@ export default function Products() {
                       strokeWidth={1}
                     />
                   </div>
-                  <h2
-                    className={`text-3xl font-light text-white md:text-4xl ${poppins.className}`}
-                  >
+                  <h2 className={`text-3xl font-light text-white md:text-4xl`}>
                     {product.name}
                   </h2>
                 </div>
 
-                <p
-                  className={`mb-6 text-xl text-white/80 ${poppins.className}`}
-                >
+                <p className={`mb-6 text-xl text-white/80`}>
                   {product.description}
                 </p>
 
-                <p
-                  className={`mb-8 leading-relaxed text-white/60 ${poppins.className}`}
-                >
+                <p className={`mb-8 leading-relaxed text-white/60`}>
                   {product.longDescription}
                 </p>
 
                 <div className="mb-8">
-                  <h3
-                    className={`mb-4 text-lg font-light text-white ${poppins.className}`}
-                  >
+                  <h3 className={`mb-4 text-lg font-light text-white`}>
                     Vantaggi chiave
                   </h3>
                   <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -168,9 +154,7 @@ export default function Products() {
                         className="flex items-center text-white/70"
                       >
                         <div className="mr-3 h-2 w-2 flex-shrink-0 rounded-full bg-white" />
-                        <span className={`text-sm ${poppins.className}`}>
-                          {benefit}
-                        </span>
+                        <span className={`text-sm`}>{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -181,7 +165,7 @@ export default function Products() {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     size={"lg"}
-                    className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:text-white ${poppins.className}`}
+                    className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:text-white`}
                   >
                     Scopri {product.name}
                     <motion.div
@@ -202,9 +186,7 @@ export default function Products() {
             {/* Features List */}
             <div className={`${index % 2 === 1 ? "lg:order-1" : "lg:order-2"}`}>
               <div className="rounded-2xl border border-white p-8">
-                <h3
-                  className={`mb-6 text-xl font-light text-white ${poppins.className}`}
-                >
+                <h3 className={`mb-6 text-xl font-light text-white`}>
                   Caratteristiche principali
                 </h3>
                 <div className="space-y-4">
@@ -214,9 +196,7 @@ export default function Products() {
                       className="flex items-start border-b border-white/10 py-2 last:border-b-0"
                     >
                       <div className="mt-2 mr-4 h-1 w-1 flex-shrink-0 rounded-full bg-white" />
-                      <span className={`text-white/80 ${poppins.className}`}>
-                        {feature}
-                      </span>
+                      <span className={`text-white/80`}>{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -229,20 +209,16 @@ export default function Products() {
       {/* CTA Section */}
       <div className="mt-16 rounded-2xl border border-white px-4 py-16 text-center md:px-24">
         <div>
-          <h2
-            className={`mb-6 text-3xl font-light text-white md:text-4xl ${poppins.className}`}
-          >
+          <h2 className={`mb-6 text-3xl font-light text-white md:text-4xl`}>
             Hai bisogno di qualcosa di specifico?
           </h2>
-          <p
-            className={`mx-auto mb-8 max-w-3xl font-light text-white/70 ${poppins.className}`}
-          >
+          <p className={`mx-auto mb-8 max-w-3xl font-light text-white/70`}>
             Ogni progetto è unico. Contattaci per discutere come possiamo
             adattare le nostre soluzioni alle tue esigenze specifiche.
           </p>
           <Link href="#contact">
             <Button
-              className={`mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:bg-white hover:text-black ${poppins.className}`}
+              className={`mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:bg-white hover:text-black`}
             >
               Parliamo del tuo progetto
               <ArrowUpRight

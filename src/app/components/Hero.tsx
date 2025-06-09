@@ -1,14 +1,15 @@
-import { Tomorrow, Poppins } from "next/font/google";
-import { ElevenGlobe } from "../animations/eleven-globe";
+import { Poppins, Tomorrow } from "next/font/google";
+import dynamic from "next/dynamic";
 
 const tomorrow = Tomorrow({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["700"], // Only use needed weights
+  // font-display: swap is default in next/font
 });
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+// Lazy load the animation to avoid blocking text render
+const ElevenGlobe = dynamic(() => import("../animations/eleven-globe"), {
+  loading: () => null,
 });
 
 export default function Hero() {
@@ -19,13 +20,11 @@ export default function Hero() {
     >
       <div className="relative flex size-full flex-col items-center justify-start px-6 pt-24 pb-40 md:justify-center md:px-24 md:pt-8 md:pb-60">
         <span
-          className={`${poppins.className} text-center text-5xl leading-none font-semibold whitespace-pre-wrap text-white sm:text-7xl md:text-[8rem] xl:text-[14rem]`}
+          className={`text-center text-5xl leading-none font-semibold whitespace-pre-wrap text-white sm:text-7xl md:text-[8rem] xl:text-[14rem]`}
         >
           elevenhats
         </span>
-        <span
-          className={`w-full text-center font-light text-white ${tomorrow.className}`}
-        >
+        <span className={`w-full text-center font-light text-white`}>
           La prima boutique del software in Italia. <br />
           L&apos;alleato per uno sviluppo conveniente, rapido e di qualità.
         </span>

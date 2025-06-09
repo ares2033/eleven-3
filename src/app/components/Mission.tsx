@@ -1,6 +1,5 @@
 "use client";
 
-import { Poppins } from "next/font/google";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import {
   AnimatedSpan,
@@ -8,16 +7,11 @@ import {
   TypingAnimation,
 } from "@/components/magicui/terminal";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
 export function Mission() {
   return (
     <section className="container mx-auto grid h-full grid-cols-5 gap-8 px-8 py-16 md:gap-4">
       <div
-        className={`${poppins.className} col-span-5 flex flex-col items-start justify-center gap-2 px-4 text-7xl font-semibold text-white md:px-16 lg:col-span-3`}
+        className={`col-span-5 flex flex-col items-start justify-center gap-2 px-4 text-7xl font-semibold text-white md:px-16 lg:col-span-3`}
       >
         <span className="flex items-center text-2xl font-semibold md:text-5xl">
           eleven
@@ -34,7 +28,7 @@ export function Mission() {
         </span>
       </div>
       <div className="col-span-5 flex items-center justify-center lg:col-span-2">
-        <Terminal>
+        {/*<Terminal>
           <TypingAnimation duration={1} className="text-muted-foreground">
             &gt; pnpm dlx elevenhats@latest init
           </TypingAnimation>
@@ -95,8 +89,11 @@ export function Mission() {
           >
             You may now contact us.
           </TypingAnimation>
-        </Terminal>
+        </Terminal>*/}
       </div>
     </section>
   );
 }
+
+// Add default export
+export default Mission;

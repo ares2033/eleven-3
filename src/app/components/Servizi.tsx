@@ -14,14 +14,7 @@ import {
   PlusCircle,
   Clock,
 } from "lucide-react";
-import { Poppins } from "next/font/google";
 import { useState } from "react";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  display: "swap",
-});
 
 export default function ServiziBento() {
   const [isHovered, setIsHovered] = useState(false);
@@ -29,7 +22,7 @@ export default function ServiziBento() {
     <section id="features" className="container mx-auto mt-12 px-4 lg:px-48">
       <div className="flex h-full w-full flex-col">
         <h2
-          className={`py-8 text-center text-xl font-semibold text-white md:py-12 md:text-2xl lg:text-5xl ${poppins.className}`}
+          className={`py-8 text-center text-xl font-semibold text-white md:py-12 md:text-2xl lg:text-5xl`}
         >
           I nostri servizi
         </h2>
@@ -45,15 +38,11 @@ export default function ServiziBento() {
                     <div className="rounded-lg bg-white/80 p-2">
                       <Rocket className="h-6 w-6" />
                     </div>
-                    <h3
-                      className={`text-2xl font-semibold text-white ${poppins.className}`}
-                    >
+                    <h3 className={`text-2xl font-semibold text-white`}>
                       elevenauth
                     </h3>
                   </div>
-                  <p
-                    className={`mb-6 leading-relaxed text-white/90 ${poppins.className}`}
-                  >
+                  <p className={`mb-6 leading-relaxed text-white/90`}>
                     Il pacchetto Starter completo: dalla consulenza alla
                     consegna di un MVP scalabile e pronto per il mercato.
                   </p>
@@ -80,7 +69,7 @@ export default function ServiziBento() {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   size={"wide"}
-                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white ${poppins.className}`}
+                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
                 >
                   Scopri di più
                   <motion.div
@@ -104,7 +93,7 @@ export default function ServiziBento() {
             <MagicCard className="h-full w-full bg-white">
               <CardContent className="flex h-full flex-col items-center justify-center p-6 text-center">
                 <div className="mb-2 text-3xl font-bold text-white">50+</div>
-                <div className={`text-sm text-white/80 ${poppins.className}`}>
+                <div className={`text-sm text-white/80`}>
                   Progetti completati
                 </div>
                 <div className="mt-3 flex gap-1">
@@ -125,9 +114,7 @@ export default function ServiziBento() {
               <CardContent className="flex h-full flex-col items-center justify-center p-6 text-center text-white">
                 <Users className="mb-3 h-8 w-8" />
                 <div className="mb-1 text-2xl font-bold">24/7</div>
-                <div className={`text-sm text-white/90 ${poppins.className}`}>
-                  Supporto dedicato
-                </div>
+                <div className={`text-sm text-white/90`}>Supporto dedicato</div>
               </CardContent>
             </MagicCard>
           </Card>
@@ -141,13 +128,9 @@ export default function ServiziBento() {
                     <div className="rounded-lg bg-white/20 p-2">
                       <Zap className="h-5 w-5" />
                     </div>
-                    <h3
-                      className={`text-xl font-semibold ${poppins.className}`}
-                    >
-                      elevenboard
-                    </h3>
+                    <h3 className={`text-xl font-semibold`}>elevenboard</h3>
                   </div>
-                  <p className={`text-sm text-white/90 ${poppins.className}`}>
+                  <p className={`text-sm text-white/90`}>
                     API scalabili per team in crescita con automazione CI/CD e
                     monitoraggio real-time.
                   </p>
@@ -156,7 +139,7 @@ export default function ServiziBento() {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   size={"lg"}
-                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white ${poppins.className}`}
+                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
                 >
                   <motion.div
                     animate={{ rotate: isHovered ? 45 : 0 }}
@@ -181,9 +164,7 @@ export default function ServiziBento() {
                   <div className="mb-4 w-fit rounded-xl bg-white/20 p-3">
                     <Shield className="h-8 w-8" />
                   </div>
-                  <h3
-                    className={`mb-3 text-lg font-semibold ${poppins.className}`}
-                  >
+                  <h3 className={`mb-3 text-lg font-semibold`}>
                     Sicurezza Enterprise
                   </h3>
                   <div className="space-y-3 text-sm">
@@ -217,16 +198,12 @@ export default function ServiziBento() {
                     <div className="rounded-lg bg-white/20 p-2">
                       <Shield className="h-5 w-5" />
                     </div>
-                    <h3
-                      className={`text-xl font-semibold ${poppins.className}`}
-                    >
-                      elevenpay
-                    </h3>
+                    <h3 className={`text-xl font-semibold`}>elevenpay</h3>
                     <span className="rounded-full bg-yellow-400 px-2 py-1 text-xs font-medium text-gray-900">
                       ENTERPRISE
                     </span>
                   </div>
-                  <p className={`text-sm text-white/90 ${poppins.className}`}>
+                  <p className={`text-sm text-white/90`}>
                     Soluzione completa per identità, accessi e sicurezza
                     aziendale.
                   </p>
@@ -235,7 +212,7 @@ export default function ServiziBento() {
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   size={"lg"}
-                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white ${poppins.className}`}
+                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
                 >
                   <motion.div
                     animate={{ rotate: isHovered ? 45 : 0 }}
@@ -256,7 +233,7 @@ export default function ServiziBento() {
               <CardContent className="flex h-full flex-col items-center justify-center p-6 text-center text-white">
                 <Clock className="mb-3 h-8 w-8" />
                 <div className="mb-1 text-2xl font-bold">Area funzionale</div>
-                <div className={`text-sm text-white/90 ${poppins.className}`}>
+                <div className={`text-sm text-white/90`}>
                   Lunedì - Sabato:9:00 - 18:00
                 </div>
               </CardContent>
@@ -269,12 +246,10 @@ export default function ServiziBento() {
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
                   <PlusCircle className="h-6 w-6 text-gray-600" />
                 </div>
-                <div
-                  className={`mb-1 text-sm font-medium text-white ${poppins.className}`}
-                >
+                <div className={`mb-1 text-sm font-medium text-white`}>
                   Progetto custom?
                 </div>
-                <div className={`text-xs text-white/80 ${poppins.className}`}>
+                <div className={`text-xs text-white/80`}>
                   Parliamone insieme
                 </div>
               </CardContent>
@@ -284,12 +259,12 @@ export default function ServiziBento() {
 
         <div className="px-8 py-8 text-center md:px-24">
           <p
-            className={`text-lg font-semibold text-white md:text-xl lg:text-2xl ${poppins.className}`}
+            className={`text-lg font-semibold text-white md:text-xl lg:text-2xl`}
           >
             Hai bisogno di informazioni per il servizio che ti serve?
           </p>
           <p
-            className={`text-sm font-light text-white md:text-base lg:text-lg ${poppins.className}`}
+            className={`text-sm font-light text-white md:text-base lg:text-lg`}
           >
             Contattaci per una soluzione su misura per la tua azienda
           </p>
@@ -297,7 +272,7 @@ export default function ServiziBento() {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             size={"lg"}
-            className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:cursor-pointer hover:text-white ${poppins.className}`}
+            className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:cursor-pointer hover:text-white`}
           >
             Contattaci
             <motion.div

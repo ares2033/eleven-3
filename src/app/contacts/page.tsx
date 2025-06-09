@@ -16,15 +16,9 @@ import {
   CheckCircle,
   Star,
 } from "lucide-react";
-import { Poppins } from "next/font/google";
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export default function ContactPage() {
   const [isHovered, setIsHovered] = useState(false);
@@ -130,12 +124,12 @@ export default function ContactPage() {
       <div className="w-full py-24">
         <div>
           <h1
-            className={`text-center text-4xl leading-tight font-semibold text-white md:text-5xl lg:text-6xl ${poppins.className}`}
+            className={`text-center text-4xl leading-tight font-semibold text-white md:text-5xl lg:text-6xl`}
           >
             Iniziamo insieme
           </h1>
           <p
-            className={`mx-auto mt-6 max-w-4xl text-center text-xl text-white/70 md:text-2xl ${poppins.className}`}
+            className={`mx-auto mt-6 max-w-4xl text-center text-xl text-white/70 md:text-2xl`}
           >
             Trasformiamo le tue idee in soluzioni digitali innovative. Scegli il
             metodo di contatto più adatto alle tue esigenze e iniziamo a
@@ -147,7 +141,7 @@ export default function ContactPage() {
       {/* Contact Methods */}
       <div className="mb-20 px-4 lg:px-48">
         <h2
-          className={`mb-16 text-center text-3xl font-light text-white md:text-4xl ${poppins.className}`}
+          className={`mb-16 text-center text-3xl font-light text-white md:text-4xl`}
         >
           Come possiamo aiutarti?
         </h2>
@@ -163,15 +157,13 @@ export default function ContactPage() {
                       strokeWidth={1}
                     />
                   </div>
-                  <h3
-                    className={`text-xl font-light text-white md:text-2xl ${poppins.className}`}
-                  >
+                  <h3 className={`text-xl font-light text-white md:text-2xl`}>
                     {method.title}
                   </h3>
                 </div>
 
                 <p
-                  className={`mb-6 text-sm leading-relaxed text-white/80 md:text-base ${poppins.className}`}
+                  className={`mb-6 text-sm leading-relaxed text-white/80 md:text-base`}
                 >
                   {method.description}
                 </p>
@@ -184,7 +176,7 @@ export default function ContactPage() {
                         className="flex items-center text-sm text-white/70"
                       >
                         <CheckCircle className="mr-3 h-4 w-4 text-green-500" />
-                        <span className={poppins.className}>{detail}</span>
+                        <span>{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -192,7 +184,7 @@ export default function ContactPage() {
 
                 <div>
                   <Button
-                    className={`w-full rounded-full border border-white/20 bg-transparent font-light text-white transition-all duration-300 hover:bg-white hover:text-black ${poppins.className}`}
+                    className={`w-full rounded-full border border-white/20 bg-transparent font-light text-white transition-all duration-300 hover:bg-white hover:text-black`}
                   >
                     {method.action}
                     <ArrowUpRight viewBox="4 4 16 16" strokeWidth={1} />
@@ -207,7 +199,7 @@ export default function ContactPage() {
       {/* FAQ Section */}
       <div className="mb-20 px-4 lg:px-48">
         <h2
-          className={`mb-16 text-center text-3xl font-light text-white md:text-4xl ${poppins.className}`}
+          className={`mb-16 text-center text-3xl font-light text-white md:text-4xl`}
         >
           Domande frequenti
         </h2>
@@ -221,13 +213,11 @@ export default function ContactPage() {
                 className="border-white/20"
               >
                 <AccordionTrigger
-                  className={`text-left text-lg font-light text-white hover:text-white/80 md:text-xl ${poppins.className}`}
+                  className={`text-left text-lg font-light text-white hover:text-white/80 md:text-xl`}
                 >
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent
-                  className={`leading-relaxed text-white/70 ${poppins.className}`}
-                >
+                <AccordionContent className={`leading-relaxed text-white/70`}>
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -239,7 +229,7 @@ export default function ContactPage() {
       {/* Testimonials */}
       <div className="mb-20 px-4 lg:px-48">
         <h2
-          className={`mb-16 text-center text-3xl font-light text-white md:text-4xl ${poppins.className}`}
+          className={`mb-16 text-center text-3xl font-light text-white md:text-4xl`}
         >
           Cosa dicono i nostri clienti
         </h2>
@@ -260,18 +250,12 @@ export default function ContactPage() {
                   ),
                 )}
               </div>
-              <p
-                className={`mb-6 leading-relaxed text-white/80 ${poppins.className}`}
-              >
+              <p className={`mb-6 leading-relaxed text-white/80`}>
                 &quot;{testimonial.content}&quot;
               </p>
               <div>
-                <h4 className={`font-medium text-white ${poppins.className}`}>
-                  {testimonial.name}
-                </h4>
-                <p className={`text-sm text-white/60 ${poppins.className}`}>
-                  {testimonial.role}
-                </p>
+                <h4 className={`font-medium text-white`}>{testimonial.name}</h4>
+                <p className={`text-sm text-white/60`}>{testimonial.role}</p>
               </div>
             </div>
           ))}
@@ -282,20 +266,16 @@ export default function ContactPage() {
       <div className="mb-20 px-4 lg:px-48">
         <div className="grid gap-12 md:grid-cols-2">
           <div className="rounded-2xl border border-white p-8">
-            <h2
-              className={`mb-6 text-2xl font-light text-white md:text-3xl ${poppins.className}`}
-            >
+            <h2 className={`mb-6 text-2xl font-light text-white md:text-3xl`}>
               Chi siamo
             </h2>
-            <p
-              className={`mb-6 leading-relaxed text-white/70 ${poppins.className}`}
-            >
+            <p className={`mb-6 leading-relaxed text-white/70`}>
               ElevenHats è un team di sviluppatori e designer appassionati che
               trasforma idee innovative in soluzioni digitali di successo. Con
               oltre 8 anni di esperienza, abbiamo aiutato più di 150 aziende a
               digitalizzare i loro processi e raggiungere i loro obiettivi.
             </p>
-            <p className={`leading-relaxed text-white/70 ${poppins.className}`}>
+            <p className={`leading-relaxed text-white/70`}>
               La nostra missione è semplice: creare tecnologia che funziona, che
               scala e che genera valore reale per il business dei nostri
               clienti.
@@ -304,63 +284,43 @@ export default function ContactPage() {
 
           <div className="space-y-8">
             <div className="rounded-2xl border border-white p-8">
-              <h3
-                className={`mb-4 text-xl font-light text-white ${poppins.className}`}
-              >
+              <h3 className={`mb-4 text-xl font-light text-white`}>
                 Informazioni aziendali
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MapPin className="mr-3 h-5 w-5 text-white/60" />
-                  <span className={`text-white/70 ${poppins.className}`}>
+                  <span className={`text-white/70`}>
                     Via Vittorio Veneto 22, Bresso (MI), Italia
                   </span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="mr-3 h-5 w-5 text-white/60" />
-                  <span className={`text-white/70 ${poppins.className}`}>
-                    info@elevenhats.it
-                  </span>
+                  <span className={`text-white/70`}>info@elevenhats.it</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="mr-3 h-5 w-5 text-white/60" />
-                  <span className={`text-white/70 ${poppins.className}`}>
-                    +39 324 530 5977
-                  </span>
+                  <span className={`text-white/70`}>+39 324 530 5977</span>
                 </div>
               </div>
             </div>
 
             <div className="rounded-2xl border border-white p-8">
-              <h3
-                className={`mb-4 text-xl font-light text-white ${poppins.className}`}
-              >
+              <h3 className={`mb-4 text-xl font-light text-white`}>
                 Orari di lavoro
               </h3>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className={`text-white/70 ${poppins.className}`}>
-                    Lunedì - Venerdì:
-                  </span>
-                  <span className={`text-white/70 ${poppins.className}`}>
-                    9:00 - 18:00
-                  </span>
+                  <span className={`text-white/70`}>Lunedì - Venerdì:</span>
+                  <span className={`text-white/70`}>9:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className={`text-white/70 ${poppins.className}`}>
-                    Sabato:
-                  </span>
-                  <span className={`text-white/70 ${poppins.className}`}>
-                    9:00 - 13:00
-                  </span>
+                  <span className={`text-white/70`}>Sabato:</span>
+                  <span className={`text-white/70`}>9:00 - 13:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className={`text-white/70 ${poppins.className}`}>
-                    Supporto 24/7:
-                  </span>
-                  <span className={`text-white/70 ${poppins.className}`}>
-                    Sempre attivo
-                  </span>
+                  <span className={`text-white/70`}>Supporto 24/7:</span>
+                  <span className={`text-white/70`}>Sempre attivo</span>
                 </div>
               </div>
             </div>
@@ -371,14 +331,10 @@ export default function ContactPage() {
       {/* Final CTA */}
       <div className="px-4 text-center md:px-24">
         <div>
-          <h2
-            className={`mb-6 text-3xl font-light text-white md:text-4xl ${poppins.className}`}
-          >
+          <h2 className={`mb-6 text-3xl font-light text-white md:text-4xl`}>
             Non aspettare, iniziamo oggi
           </h2>
-          <p
-            className={`mx-auto mb-8 max-w-3xl font-light text-white/70 ${poppins.className}`}
-          >
+          <p className={`mx-auto mb-8 max-w-3xl font-light text-white/70`}>
             Il momento migliore per iniziare è adesso. Contattaci per una
             consulenza gratuita e scopri come possiamo trasformare la tua
             visione in realtà.
@@ -389,7 +345,7 @@ export default function ContactPage() {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 size={"lg"}
-                className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:text-white ${poppins.className}`}
+                className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:text-white`}
               >
                 Inizia la tua trasformazione digitale
                 <motion.div

@@ -6,14 +6,8 @@ import { useState } from "react";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { api } from "@/trpc/react";
 
-import { Poppins } from "next/font/google";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 interface FormData {
   name: string;
@@ -27,7 +21,7 @@ interface FormErrors {
   message?: string;
 }
 
-export default function Contact() {
+function Contact() {
   const [isHovered, setIsHovered] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -114,7 +108,7 @@ export default function Contact() {
     <section id="contact" className="container mx-auto px-4 py-16">
       <div className="w-full py-12">
         <h1
-          className={`text-center text-4xl leading-tight font-semibold text-white md:text-5xl lg:text-6xl ${poppins.className}`}
+          className={`text-center text-4xl leading-tight font-semibold text-white md:text-5xl lg:text-6xl`}
         >
           Contattaci
         </h1>
@@ -124,9 +118,7 @@ export default function Contact() {
         <div>
           <div className="h-full w-full rounded-2xl border border-white">
             <div className="border-b border-white/20 px-8 py-6">
-              <h2
-                className={`text-xl font-semibold text-white ${poppins.className}`}
-              >
+              <h2 className={`text-xl font-semibold text-white`}>
                 Inviaci un messaggio
               </h2>
               <p className="mt-2 text-white/80">
@@ -215,7 +207,7 @@ export default function Contact() {
                   type="submit"
                   size={"wide"}
                   variant={"outline"}
-                  className={`hover:bg-accent/20 w-full rounded-full border border-white/20 bg-transparent font-light text-white hover:cursor-pointer hover:text-white ${poppins.className}`}
+                  className={`hover:bg-accent/20 w-full rounded-full border border-white/20 bg-transparent font-light text-white hover:cursor-pointer hover:text-white`}
                   disabled={isLoading}
                 >
                   {isLoading ? "Invio in corso..." : "Invia Messaggio"}
@@ -238,9 +230,7 @@ export default function Contact() {
         <div className="flex flex-col rounded-2xl border border-white">
           <div>
             <div className="border-b border-white/20 px-8 py-6 md:px-12">
-              <h2
-                className={`text-xl font-semibold text-white ${poppins.className}`}
-              >
+              <h2 className={`text-xl font-semibold text-white`}>
                 Informazioni di contatto
               </h2>
               <p className="mt-2 text-white/80">
@@ -277,9 +267,7 @@ export default function Contact() {
 
           <div className="flex-grow rounded text-white">
             <div className="px-8 py-6 md:px-12">
-              <h3
-                className={`mb-4 text-xl font-semibold ${poppins.className} `}
-              >
+              <h3 className={`mb-4 text-xl font-semibold`}>
                 Orari di apertura
               </h3>
               <div className="space-y-4">
@@ -307,3 +295,6 @@ export default function Contact() {
     </section>
   );
 }
+
+// Add default export
+export default Contact;

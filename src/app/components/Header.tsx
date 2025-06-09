@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Menu } from "lucide-react";
 import type { JSX } from "react/jsx-runtime";
-import { Tomorrow, Poppins } from "next/font/google";
+import { Tomorrow } from "next/font/google";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
@@ -14,12 +14,8 @@ const tomorrow = Tomorrow({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
-export default function ResponsiveHeader(): JSX.Element {
+function ResponsiveHeader(): JSX.Element {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [isSheetOpen, setIsSheetOpen] = useState<boolean>(false);
@@ -59,14 +55,12 @@ export default function ResponsiveHeader(): JSX.Element {
         <div className="flex items-center ps-4 sm:ps-8">
           <Link href="/" className="flex items-center space-x-2">
             <span
-              className={`font-sans text-base font-bold transition-colors duration-300 sm:text-lg ${textColorClass} ${poppins.className}`}
+              className={`font-sans text-base font-bold transition-colors duration-300 sm:text-lg ${textColorClass} `}
             >
               elevenhats
             </span>
           </Link>
         </div>
-
-        {/* Search Bar - Center (Desktop only, when not in mobile menu mode) */}
 
         {/* Navigation - Right side */}
         <div className="flex h-full items-center">
@@ -195,10 +189,8 @@ export default function ResponsiveHeader(): JSX.Element {
 
                 {/* Footer area */}
                 <div className="border-t border-white/20 p-6">
-                  <p className={`text-sm text-white/70 ${poppins.className}`}>
-                    elevenhats
-                  </p>
-                  <p className={`text-xs text-white/50 ${poppins.className}`}>
+                  <p className={`text-sm text-white/70`}>elevenhats</p>
+                  <p className={`text-xs text-white/50`}>
                     La prima boutique del software in Italia
                   </p>
                 </div>
@@ -318,3 +310,6 @@ export default function ResponsiveHeader(): JSX.Element {
     </header>
   );
 }
+
+// Add default export
+export default ResponsiveHeader;

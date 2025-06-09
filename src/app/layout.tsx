@@ -1,16 +1,21 @@
+import type React from "react";
 import "@/styles/globals.css";
-
-import { type Metadata } from "next";
-import { Geist } from "next/font/google";
-import Header from "./components/Header";
-
+import type { Metadata } from "next";
+import { Suspense, lazy } from "react";
+import dynamic from "next/dynamic"; // add this import
+import { ScriptOptimizer } from "./components/script-optimizer";
 import { TRPCReactProvider } from "@/trpc/react";
-import Footer from "./components/Footer";
-import Contact from "./components/Contact";
-import { DotPattern } from "@/components/magicui/dot-pattern";
+import { Poppins } from "next/font/google";
+import Script from "next/script";
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
+
+// Optimized metadata for better SEO and performance
 export const metadata: Metadata = {
-  // Basic
   title: "elevenhats",
   description: "La prima boutique del software in Italia",
   applicationName: "elevenhats",
@@ -19,14 +24,12 @@ export const metadata: Metadata = {
   publisher: "ElevenHats S.r.l.",
   generator: "Next.js",
 
-  // Icons and Manifest
+  // Optimized icons
   icons: [
-    { rel: "icon", url: "/favicon.svg" },
+    { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
     { rel: "apple-touch-icon", url: "/favicon.svg" },
   ],
-  manifest: "/site.webmanifest",
 
-  // Viewport & Referrer
   referrer: "strict-origin-when-cross-origin",
   robots: {
     index: true,
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
     },
   },
 
-  // Open Graph - Single page uses favicon.svg for preview
+  // Optimized Open Graph
   openGraph: {
     title: "elevenhats",
     description: "La prima boutique del software in Italia",
@@ -58,7 +61,6 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  // Twitter
   twitter: {
     card: "summary_large_image",
     site: "@elevenhats",
@@ -68,43 +70,87 @@ export const metadata: Metadata = {
     images: ["https://www.elevenhats.it/meta/twitter_logo.png"],
   },
 
-  // Alternate - only canonical for single page
   alternates: {
     canonical: "https://www.elevenhats.it",
   },
 
-  // Verification tokens
   verification: {
     google: "ufRO8PtGWD-CzaaMwJvAGj4-Kvy48BO0MsBRqceJivM",
   },
 };
 
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
+// Lazy load heavy components with proper imports
+const LazyHeader = lazy(() => import("./components/Header"));
+const LazyFooter = lazy(() => import("./components/Footer"));
+const LazyContact = lazy(() => import("./components/Contact"));
+
+// Add this dynamic import instead
+const LazyDotPattern = dynamic(() =>
+  import("@/components/magicui/dot-pattern").then((m) => m.DotPattern),
+);
+
+// Loading fallbacks for better UX
+const HeaderFallback = () => (
+  <div className="h-16 animate-pulse border-b border-gray-800 bg-black" />
+);
+
+const FooterFallback = () => (
+  <div className="h-32 animate-pulse border-t border-gray-800 bg-black" />
+);
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body className="bg-black">
-        <Header />
-        <TRPCReactProvider>
-          <DotPattern
-            className="text-neutral-300 dark:text-neutral-700"
-            width={32}
-            height={32}
-            cr={1}
-            opacity={0.4}
-            glow={true}
-          />
-          {children}
+    <html lang="en" className={`${poppins.className}`}>
+      <head>
+        {/* Critical resource hints */}
+        <link rel="dns-prefetch" href="https://www.elevenhats.it" />
 
-          <Contact />
+        {/* Preload critical assets */}
+        <link href="/favicon.svg" as="image" type="image/svg+xml" />
+
+        {/* Critical CSS will be inlined by Next.js automatically
+        <Script
+          crossOrigin="anonymous"
+          src="https://unpkg.com/react-scan/dist/auto.global.js"
+        /> */}
+      </head>
+      <body className="bg-black">
+        <TRPCReactProvider>
+          {/* Script optimizer for deferred tasks */}
+          <ScriptOptimizer />
+
+          {/* Header with loading fallback */}
+          <Suspense fallback={<HeaderFallback />}>
+            <LazyHeader />
+          </Suspense>
+
+          {/* Background pattern - lazy loaded and optimized */}
+          <Suspense fallback={null}>
+            <LazyDotPattern
+              className="text-neutral-300 dark:text-neutral-700"
+              width={32}
+              height={32}
+              cr={1}
+              opacity={0.4}
+              glow={false} // Disable glow for better performance
+            />
+          </Suspense>
+
+          {/* Main content */}
+          <main className="relative z-10">{children}</main>
+
+          {/* Contact section - lazy loaded */}
+          <Suspense fallback={null}>
+            <LazyContact />
+          </Suspense>
+
+          {/* Footer with loading fallback */}
+          <Suspense fallback={<FooterFallback />}>
+            <LazyFooter />
+          </Suspense>
         </TRPCReactProvider>
-        <Footer />
       </body>
     </html>
   );

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { Tomorrow, Poppins } from "next/font/google";
+import { Tomorrow } from "next/font/google";
 import { useState } from "react";
 
 const tomorrow = Tomorrow({
@@ -11,12 +11,7 @@ const tomorrow = Tomorrow({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
-export default function Footer() {
+function Footer() {
   const [isHovered, setIsHovered] = useState(false);
   const footerLinks = [
     {
@@ -47,12 +42,10 @@ export default function Footer() {
         <div className="border-b border-black/10 pt-16 pb-8">
           <div className="mb-8 grid grid-cols-1 gap-8 border-b border-black/10 px-4 md:grid-cols-2 md:px-24 lg:grid-cols-5">
             <div className="lg:col-span-2">
-              <h3
-                className={`mb-4 text-2xl font-semibold text-black ${poppins.className}`}
-              >
+              <h3 className={`mb-4 text-2xl font-semibold text-black`}>
                 elevenhats
               </h3>
-              <p className={`mb-6 max-w-md text-black/70 ${poppins.className}`}>
+              <p className={`mb-6 max-w-md text-black/70`}>
                 La prima boutique del software in Italia.
                 <br />
                 L&apos;alleato per uno sviluppo conveniente, rapido e di
@@ -72,7 +65,7 @@ export default function Footer() {
                     <li key={linkIndex}>
                       <a
                         href={link.href}
-                        className={`text-black/70 transition-colors hover:text-black ${poppins.className}`}
+                        className={`text-black/70 transition-colors hover:text-black`}
                       >
                         {link.name}
                       </a>
@@ -104,9 +97,7 @@ export default function Footer() {
           </div>
 
           {/* Informazioni legali */}
-          <div
-            className={`px-4 text-sm text-black/50 md:px-24 ${poppins.className}`}
-          >
+          <div className={`px-4 text-sm text-black/50 md:px-24`}>
             <p className="mb-1">Ragione sociale: elevenhats S.R.L.</p>
             <p className="mb-1">P.IVA: 14223650962</p>
             <p>Sede Legale: Via Vittorio Veneto 22, Bresso (MI), Italia</p>
@@ -114,7 +105,7 @@ export default function Footer() {
         </div>
 
         <div
-          className={`border-b border-black/10 px-4 py-8 text-center md:flex md:justify-between md:px-24 md:text-left ${poppins.className}`}
+          className={`border-b border-black/10 px-4 py-8 text-center md:flex md:justify-between md:px-24 md:text-left`}
         >
           <p className="text-black/50">
             &copy; {new Date().getFullYear()} elevenhats. All rights reserved.
@@ -127,3 +118,6 @@ export default function Footer() {
     </footer>
   );
 }
+
+// Add default export
+export default Footer;

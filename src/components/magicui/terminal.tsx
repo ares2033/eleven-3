@@ -1,5 +1,7 @@
 "use client";
 
+import type React from "react";
+
 import { cn } from "@/lib/utils";
 import { motion, type MotionProps } from "motion/react";
 import { useEffect, useRef, useState } from "react";

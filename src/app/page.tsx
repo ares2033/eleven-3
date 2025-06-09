@@ -1,15 +1,15 @@
-"use client";
+import type { Metadata } from "next";
+import HomePageClient from "./HomePageClient";
 
-import Hero from "./components/Hero";
-import Servizi from "./components/Servizi";
-import { Mission } from "./components/Mission";
+// Optimized metadata
+export const metadata: Metadata = {
+  title: "elevenhats - La prima boutique del software in Italia",
+  description:
+    "Scopri i nostri servizi di sviluppo software personalizzati. Soluzioni innovative per la tua azienda.",
+};
 
-export default function Home() {
-  return (
-    <>
-      <Hero />
-      <Mission />
-      <Servizi />
-    </>
-  );
+// Move all client-only logic to a client component
+
+export default function HomePage() {
+  return <HomePageClient />;
 }

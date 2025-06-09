@@ -9,7 +9,7 @@ import {
   Zap,
   FileText,
 } from "lucide-react";
-import { Tomorrow, Poppins } from "next/font/google";
+import { Tomorrow } from "next/font/google";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
@@ -20,11 +20,6 @@ import {
 } from "@/components/ui/accordion";
 
 const tomorrow = Tomorrow({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
-const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
@@ -41,9 +36,7 @@ export default function ElevenAuth() {
             >
               elevenauth
             </h1>
-            <p
-              className={`mb-8 text-xl text-white/70 md:text-2xl ${poppins.className}`}
-            >
+            <p className={`mb-8 text-xl text-white/70 md:text-2xl`}>
               La soluzione per trasformare la tua idea in realtà
             </p>
           </div>
@@ -62,7 +55,7 @@ export default function ElevenAuth() {
               >
                 La soluzione completa per il tuo progetto digitale
               </h2>
-              <div className={`space-y-6 text-black/80 ${poppins.className}`}>
+              <div className={`space-y-6 text-black/80`}>
                 <p className="text-lg leading-relaxed">
                   ElevenAuth è il nostro pacchetto completo progettato per
                   trasformare la tua visione in un prodotto digitale funzionante
@@ -92,7 +85,7 @@ export default function ElevenAuth() {
               >
                 Cosa include
               </h2>
-              <ul className={`space-y-4 ${poppins.className}`}>
+              <ul className={`space-y-4`}>
                 {[
                   "Analisi approfondita dei requisiti e definizione della roadmap di progetto",
                   "Progettazione UI/UX responsive centrata sull'esperienza utente",
@@ -123,7 +116,7 @@ export default function ElevenAuth() {
               >
                 Perfetto per
               </h2>
-              <div className={`space-y-4 text-white/80 ${poppins.className}`}>
+              <div className={`space-y-4 text-white/80`}>
                 <p>
                   • Startup che vogliono validare rapidamente la loro idea sul
                   mercato
@@ -160,7 +153,7 @@ export default function ElevenAuth() {
                     1. Analisi e Pianificazione
                   </h3>
                 </div>
-                <p className={`text-black/80 ${poppins.className}`}>
+                <p className={`text-black/80`}>
                   Iniziamo con un&apos;analisi approfondita delle tue esigenze e
                   obiettivi. Definiamo insieme il perimetro del progetto,
                   identifichiamo le funzionalità chiave e creiamo una roadmap
@@ -181,7 +174,7 @@ export default function ElevenAuth() {
                     2. Design e Prototipazione
                   </h3>
                 </div>
-                <p className={`text-black/80 ${poppins.className}`}>
+                <p className={`text-black/80`}>
                   Creiamo wireframe e prototipi interattivi che visualizzano
                   l&apos;interfaccia utente e il flusso di navigazione. Questo
                   ti permette di vedere e testare il prodotto prima che venga
@@ -202,7 +195,7 @@ export default function ElevenAuth() {
                     3. Sviluppo e Testing
                   </h3>
                 </div>
-                <p className={`text-black/80 ${poppins.className}`}>
+                <p className={`text-black/80`}>
                   Implementiamo il tuo prodotto utilizzando tecnologie moderne e
                   scalabili. Adottiamo un approccio iterativo con cicli di
                   sviluppo brevi che ti permettono di vedere i progressi
@@ -223,7 +216,7 @@ export default function ElevenAuth() {
                     4. Lancio e Supporto
                   </h3>
                 </div>
-                <p className={`text-black/80 ${poppins.className}`}>
+                <p className={`text-black/80`}>
                   Gestiamo il processo di deployment e configuriamo
                   l&apos;infrastruttura necessaria per il lancio. Dopo il
                   rilascio, forniamo supporto tecnico per risolvere eventuali
@@ -244,9 +237,7 @@ export default function ElevenAuth() {
             >
               Stack tecnologico
             </h2>
-            <p
-              className={`mb-12 text-center text-lg text-white/80 ${poppins.className}`}
-            >
+            <p className={`mb-12 text-center text-lg text-white/80`}>
               Utilizziamo tecnologie all&apos;avanguardia per garantire che il
               tuo prodotto sia veloce, sicuro e scalabile.
             </p>
@@ -258,7 +249,7 @@ export default function ElevenAuth() {
                 >
                   Frontend
                 </h3>
-                <p className={`text-white/80 ${poppins.className}`}>
+                <p className={`text-white/80`}>
                   React, Next.js, TypeScript, Tailwind CSS, Framer Motion
                 </p>
               </div>
@@ -269,7 +260,7 @@ export default function ElevenAuth() {
                 >
                   Backend
                 </h3>
-                <p className={`text-white/80 ${poppins.className}`}>
+                <p className={`text-white/80`}>
                   Node.js, Express, NestJS, GraphQL, REST API
                 </p>
               </div>
@@ -280,7 +271,7 @@ export default function ElevenAuth() {
                 >
                   Database & Cloud
                 </h3>
-                <p className={`text-white/80 ${poppins.className}`}>
+                <p className={`text-white/80`}>
                   PostgreSQL, MongoDB, Firebase, AWS, Vercel
                 </p>
               </div>
@@ -304,7 +295,7 @@ export default function ElevenAuth() {
                 >
                   Piattaforma di prenotazione per studio medico
                 </h3>
-                <p className={`mb-6 text-white/80 ${poppins.className}`}>
+                <p className={`mb-6 text-white/80`}>
                   Abbiamo sviluppato un sistema completo di prenotazione online
                   per uno studio medico specializzato, permettendo ai pazienti
                   di prenotare appuntamenti 24/7 e ai medici di gestire il
@@ -312,7 +303,7 @@ export default function ElevenAuth() {
                   un sistema di notifiche automatiche e integrazione con il
                   software gestionale esistente.
                 </p>
-                <div className={`space-y-2 ${poppins.className}`}>
+                <div className={`space-y-2`}>
                   <p className="text-white/60">
                     <span className="font-medium text-white">Sfida:</span>{" "}
                     Ridurre il carico di lavoro del personale di reception e
@@ -337,7 +328,7 @@ export default function ElevenAuth() {
                 >
                   App di delivery per ristorante locale
                 </h3>
-                <p className={`mb-6 text-white/80 ${poppins.className}`}>
+                <p className={`mb-6 text-white/80`}>
                   Per un ristorante che voleva espandere il proprio business
                   durante la pandemia, abbiamo creato un&apos;applicazione di
                   food delivery personalizzata che ha permesso loro di gestire
@@ -345,7 +336,7 @@ export default function ElevenAuth() {
                   con commissioni elevate. L&apos;app include funzionalità di
                   tracciamento in tempo reale e pagamenti online sicuri.
                 </p>
-                <div className={`space-y-2 ${poppins.className}`}>
+                <div className={`space-y-2`}>
                   <p className="text-white/60">
                     <span className="font-medium text-white">Sfida:</span>{" "}
                     Creare un canale di vendita diretto evitando le commissioni
@@ -386,9 +377,7 @@ export default function ElevenAuth() {
                 >
                   Quanto tempo ci vuole per sviluppare un MVP?
                 </AccordionTrigger>
-                <AccordionContent
-                  className={`px-6 pb-6 text-white/80 ${poppins.className}`}
-                >
+                <AccordionContent className={`px-6 pb-6 text-white/80`}>
                   I tempi di sviluppo variano in base alla complessità del
                   progetto, ma generalmente un MVP richiede da 6 a 12 settimane.
                   Durante la fase di analisi iniziale, definiremo insieme una
@@ -407,9 +396,7 @@ export default function ElevenAuth() {
                 >
                   Come gestite le modifiche durante lo sviluppo?
                 </AccordionTrigger>
-                <AccordionContent
-                  className={`px-6 pb-6 text-white/80 ${poppins.className}`}
-                >
+                <AccordionContent className={`px-6 pb-6 text-white/80`}>
                   Comprendiamo che le esigenze possono evolvere durante lo
                   sviluppo. Utilizziamo metodologie agili che ci permettono di
                   adattarci ai cambiamenti in modo efficiente. Per modifiche
@@ -428,9 +415,7 @@ export default function ElevenAuth() {
                 >
                   Chi possiede il codice e la proprietà intellettuale?
                 </AccordionTrigger>
-                <AccordionContent
-                  className={`px-6 pb-6 text-white/80 ${poppins.className}`}
-                >
+                <AccordionContent className={`px-6 pb-6 text-white/80`}>
                   Tu mantieni la piena proprietà di tutto il codice, design e
                   contenuti sviluppati durante il progetto. Al completamento, ti
                   forniamo l&apos;accesso completo ai repository di codice e a
@@ -449,9 +434,7 @@ export default function ElevenAuth() {
                 >
                   Offrite supporto continuo dopo il lancio?
                 </AccordionTrigger>
-                <AccordionContent
-                  className={`px-6 pb-6 text-white/80 ${poppins.className}`}
-                >
+                <AccordionContent className={`px-6 pb-6 text-white/80`}>
                   Sì, offriamo diversi livelli di supporto post-lancio. Ogni
                   progetto include un periodo di supporto base per risolvere
                   eventuali problemi iniziali. Per esigenze a lungo termine,
@@ -476,9 +459,7 @@ export default function ElevenAuth() {
             >
               Pronto a iniziare?
             </h2>
-            <p
-              className={`mx-auto mb-8 max-w-2xl text-white/70 ${poppins.className}`}
-            >
+            <p className={`mx-auto mb-8 max-w-2xl text-white/70`}>
               Contattaci per discutere il tuo progetto e ricevere un preventivo
               personalizzato. Il primo colloquio di consulenza è gratuito e
               senza impegno.
