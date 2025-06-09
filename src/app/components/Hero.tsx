@@ -18,7 +18,7 @@ export default function Hero() {
       id="hero"
       className="relative container mx-auto flex h-dvh w-full justify-center"
     >
-      <div className="relative flex size-full flex-col items-center justify-start px-6 pt-24 pb-40 md:justify-center md:px-24 md:pt-8 md:pb-60">
+      <div className="relative flex size-full flex-col items-center justify-start px-6 pt-48 pb-40 md:justify-center md:px-24 md:pt-8 md:pb-60">
         <span
           className={`text-center text-5xl leading-none font-semibold whitespace-pre-wrap text-white sm:text-7xl md:text-[8rem] xl:text-[14rem]`}
         >
@@ -31,7 +31,9 @@ export default function Hero() {
         <div className="absolute top-0 right-0 bottom-0 left-0 z-10 flex items-center justify-center overflow-hidden">
           <ElevenGlobe />
         </div>
-        <div className="absolute bottom-0 z-40 h-32 w-full bg-gradient-to-t from-black to-black/0"></div>
+        <div className="absolute bottom-0 z-40 h-full w-full">
+          <div className="absolute bottom-0 z-50 h-32 w-full bg-gradient-to-t from-black to-black/0"></div>
+        </div>
       </div>
 
       {/* Content Grid 

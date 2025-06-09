@@ -6,12 +6,12 @@ import dynamic from "next/dynamic"; // add this import
 import { ScriptOptimizer } from "./components/script-optimizer";
 import { TRPCReactProvider } from "@/trpc/react";
 import { Poppins } from "next/font/google";
-import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
+  preload: false,
 });
 
 // Optimized metadata for better SEO and performance

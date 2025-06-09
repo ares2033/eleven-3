@@ -2,18 +2,22 @@
 
 import { useEffect } from "react";
 
+function preloadNextPageResources() {
+  const links = ["/products", "/solutions"];
+  links.forEach((href) => {
+    const link = document.createElement("link");
+    link.href = href;
+    document.head.appendChild(link);
+  });
+}
+
 export function ScriptOptimizer() {
   useEffect(() => {
     // Defer heavy operations until after initial render
     const deferredTasks = () => {
       // Preload critical resources during idle time
       if ("requestIdleCallback" in window) {
-        requestIdleCallback(() => {
-          // Preload next page resources
-          const link = document.createElement("link");
-          link.href = "/products";
-          document.head.appendChild(link);
-        });
+        requestIdleCallback(preloadNextPageResources);
       }
     };
 

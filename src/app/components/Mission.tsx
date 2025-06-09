@@ -28,12 +28,16 @@ export function Mission() {
         </span>
       </div>
       <div className="col-span-5 flex items-center justify-center lg:col-span-2">
-        {/*<Terminal>
+        <Terminal className="h-full w-full">
           <TypingAnimation duration={1} className="text-muted-foreground">
             &gt; pnpm dlx elevenhats@latest init
           </TypingAnimation>
 
-          <AnimatedSpan delay={1500} className="text-green-500">
+          <AnimatedSpan delay={1000} className="text-green-500">
+            <span>✔ Servizio.</span>
+          </AnimatedSpan>
+
+          <AnimatedSpan delay={2000} className="text-green-500">
             <span>✔ Servizio.</span>
           </AnimatedSpan>
 
@@ -41,55 +45,55 @@ export function Mission() {
             <span>✔ Servizio.</span>
           </AnimatedSpan>
 
-          <AnimatedSpan delay={4500} className="text-green-500">
-            <span>✔ Servizio.</span>
-          </AnimatedSpan>
-
-          <TypingAnimation delay={6000} duration={1} className="text-green-500">
-            █████████████████████████ 100% completed
+          <TypingAnimation
+            delay={4000}
+            duration={10}
+            className="text-green-500"
+          >
+            █████████████████ 100% completed
           </TypingAnimation>
 
-          <AnimatedSpan delay={8000} className="text-green-500">
+          <AnimatedSpan delay={5500} className="text-green-500">
             <span>✔ Servizio.</span>
           </AnimatedSpan>
 
-          <AnimatedSpan delay={9000} className="text-green-500">
+          <AnimatedSpan delay={6500} className="text-green-500">
             <span>✔ Servizio.</span>
           </AnimatedSpan>
 
-          <AnimatedSpan delay={10500} className="text-green-500">
+          <AnimatedSpan delay={7500} className="text-green-500">
             <span>✔ Servizio.</span>
           </AnimatedSpan>
 
-          <AnimatedSpan delay={12000} className="text-green-500">
+          <AnimatedSpan delay={8500} className="text-green-500">
             <span>✔ Servizio</span>
           </AnimatedSpan>
 
-          <AnimatedSpan delay={13500} className="text-green-500">
+          <AnimatedSpan delay={9500} className="text-green-500">
             <span>✔ Servizio.</span>
           </AnimatedSpan>
 
-          <AnimatedSpan delay={15000} className="text-blue-500">
+          <AnimatedSpan delay={10500} className="text-blue-500">
             <span>ℹ Updated 1 file:</span>
             <span className="pl-2">- lib/elevenhats.ts</span>
           </AnimatedSpan>
 
           <TypingAnimation
-            delay={16500}
-            duration={1}
+            delay={12500}
+            duration={10}
             className="text-muted-foreground"
           >
-            Success! Project initialization completed.
+            Project initialization completed.
           </TypingAnimation>
 
           <TypingAnimation
-            delay={24000}
-            duration={1}
+            delay={13500}
+            duration={10}
             className="text-muted-foreground"
           >
             You may now contact us.
           </TypingAnimation>
-        </Terminal>*/}
+        </Terminal>
       </div>
     </section>
   );

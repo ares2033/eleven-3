@@ -27,24 +27,26 @@ const tomorrow = Tomorrow({
 export default function ElevenAuth() {
   return (
     <section className="bg-black">
-      <div className="flex h-full w-full flex-col">
+      <div className="container mx-auto px-4">
         {/* Hero Section */}
-        <div className="border-b border-white/20 py-16">
+        <div className="w-full py-24">
           <div className="text-center">
             <h1
               className={`mb-6 text-4xl font-light text-white md:text-5xl lg:text-7xl ${tomorrow.className}`}
             >
               elevenauth
             </h1>
-            <p className={`mb-8 text-xl text-white/70 md:text-2xl`}>
+            <p
+              className={`mx-auto max-w-4xl text-xl text-white/70 md:text-2xl`}
+            >
               La soluzione per trasformare la tua idea in realtà
             </p>
           </div>
         </div>
 
         {/* Description Section */}
-        <div className="border-b border-white/20 bg-white py-16">
-          <div className="px-8 md:px-24">
+        <div className="mb-16">
+          <div className="rounded-2xl bg-white p-8 md:p-16">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -77,9 +79,9 @@ export default function ElevenAuth() {
         </div>
 
         {/* Features Section */}
-        <div className="border-b border-white/20">
-          <div className="grid grid-cols-1 gap-12 px-8 md:grid-cols-2 md:px-24">
-            <div className="border-e border-white/20 py-16">
+        <div className="mb-16">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+            <div className="rounded-2xl border border-white p-8">
               <h2
                 className={`mb-6 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
               >
@@ -110,7 +112,7 @@ export default function ElevenAuth() {
               </ul>
             </div>
 
-            <div className="py-16">
+            <div className="rounded-2xl border border-white p-8">
               <h2
                 className={`mb-6 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
               >
@@ -133,16 +135,16 @@ export default function ElevenAuth() {
         </div>
 
         {/* Process Section */}
-        <div className="border-b border-white/20 bg-white py-16">
-          <div className="mx-auto max-w-4xl">
+        <div className="mb-16">
+          <div className="rounded-2xl bg-white p-8 md:p-16">
             <h2
               className={`mb-12 text-center text-2xl font-light text-black md:text-3xl ${tomorrow.className}`}
             >
               Il nostro processo
             </h2>
 
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-              <div className="border border-black/20 p-8">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div className="rounded-2xl border border-black/20 p-8">
                 <div className="mb-6 flex items-center">
                   <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
                     <FileText className="h-6 w-6 text-black" strokeWidth={1} />
@@ -163,7 +165,7 @@ export default function ElevenAuth() {
                 </p>
               </div>
 
-              <div className="border border-black/20 p-8">
+              <div className="rounded-2xl border border-black/20 p-8">
                 <div className="mb-6 flex items-center">
                   <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
                     <Users className="h-6 w-6 text-black" strokeWidth={1} />
@@ -184,7 +186,7 @@ export default function ElevenAuth() {
                 </p>
               </div>
 
-              <div className="border border-black/20 p-8">
+              <div className="rounded-2xl border border-black/20 p-8">
                 <div className="mb-6 flex items-center">
                   <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
                     <Code className="h-6 w-6 text-black" strokeWidth={1} />
@@ -205,7 +207,7 @@ export default function ElevenAuth() {
                 </p>
               </div>
 
-              <div className="border border-black/20 p-8">
+              <div className="rounded-2xl border border-black/20 p-8">
                 <div className="mb-6 flex items-center">
                   <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
                     <Zap className="h-6 w-6 text-black" strokeWidth={1} />
@@ -230,8 +232,8 @@ export default function ElevenAuth() {
         </div>
 
         {/* Technology Stack */}
-        <div className="border-b border-white/20 py-16">
-          <div className="mx-auto max-w-4xl">
+        <div className="mb-16">
+          <div className="rounded-2xl border border-white p-8 md:p-16">
             <h2
               className={`mb-8 text-center text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
             >
@@ -243,7 +245,7 @@ export default function ElevenAuth() {
             </p>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-              <div className="border border-white/20 p-6 text-center">
+              <div className="rounded-2xl border border-white/20 p-6 text-center">
                 <h3
                   className={`mb-4 text-xl font-light text-white ${tomorrow.className}`}
                 >
@@ -254,7 +256,7 @@ export default function ElevenAuth() {
                 </p>
               </div>
 
-              <div className="border border-white/20 p-6 text-center">
+              <div className="rounded-2xl border border-white/20 p-6 text-center">
                 <h3
                   className={`mb-4 text-xl font-light text-white ${tomorrow.className}`}
                 >
@@ -265,7 +267,7 @@ export default function ElevenAuth() {
                 </p>
               </div>
 
-              <div className="border border-white/20 p-6 text-center">
+              <div className="rounded-2xl border border-white/20 p-6 text-center">
                 <h3
                   className={`mb-4 text-xl font-light text-white ${tomorrow.className}`}
                 >
@@ -280,16 +282,16 @@ export default function ElevenAuth() {
         </div>
 
         {/* Case Studies */}
-        <div className="border-b border-white/20 py-16">
-          <div className="mx-auto max-w-4xl">
+        <div className="mb-16">
+          <div className="rounded-2xl border border-white p-8 md:p-16">
             <h2
               className={`mb-8 text-center text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
             >
               Casi studio
             </h2>
 
-            <div className="space-y-12">
-              <div className="border border-white/20 p-8">
+            <div className="space-y-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <h3
                   className={`mb-4 text-xl font-light text-white ${tomorrow.className}`}
                 >
@@ -322,7 +324,7 @@ export default function ElevenAuth() {
                 </div>
               </div>
 
-              <div className="border border-white/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <h3
                   className={`mb-4 text-xl font-light text-white ${tomorrow.className}`}
                 >
@@ -359,25 +361,25 @@ export default function ElevenAuth() {
         </div>
 
         {/* FAQ Section */}
-        <div className="border-b border-white/20 py-16">
-          <div className="">
+        <div className="mb-16">
+          <div className="rounded-2xl border border-white p-8 md:p-16">
             <h2
               className={`mb-12 text-center text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
             >
               Domande frequenti
             </h2>
 
-            <Accordion type="single" collapsible className="space-y-0">
+            <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem
                 value="item-1"
-                className="border border-white/20 px-8 md:px-24"
+                className="rounded-2xl border border-white/20 px-6"
               >
                 <AccordionTrigger
-                  className={`px-6 py-4 text-left text-xl font-light text-white hover:no-underline ${tomorrow.className}`}
+                  className={`py-6 text-left text-xl font-light text-white hover:no-underline ${tomorrow.className}`}
                 >
                   Quanto tempo ci vuole per sviluppare un MVP?
                 </AccordionTrigger>
-                <AccordionContent className={`px-6 pb-6 text-white/80`}>
+                <AccordionContent className={`pb-6 text-white/80`}>
                   I tempi di sviluppo variano in base alla complessità del
                   progetto, ma generalmente un MVP richiede da 6 a 12 settimane.
                   Durante la fase di analisi iniziale, definiremo insieme una
@@ -389,14 +391,14 @@ export default function ElevenAuth() {
 
               <AccordionItem
                 value="item-2"
-                className="border border-white/20 px-8 md:px-24"
+                className="rounded-2xl border border-white/20 px-6"
               >
                 <AccordionTrigger
-                  className={`px-6 py-4 text-left text-xl font-light text-white hover:no-underline ${tomorrow.className}`}
+                  className={`py-6 text-left text-xl font-light text-white hover:no-underline ${tomorrow.className}`}
                 >
                   Come gestite le modifiche durante lo sviluppo?
                 </AccordionTrigger>
-                <AccordionContent className={`px-6 pb-6 text-white/80`}>
+                <AccordionContent className={`pb-6 text-white/80`}>
                   Comprendiamo che le esigenze possono evolvere durante lo
                   sviluppo. Utilizziamo metodologie agili che ci permettono di
                   adattarci ai cambiamenti in modo efficiente. Per modifiche
@@ -408,14 +410,14 @@ export default function ElevenAuth() {
 
               <AccordionItem
                 value="item-3"
-                className="border border-white/20 px-8 md:px-24"
+                className="rounded-2xl border border-white/20 px-6"
               >
                 <AccordionTrigger
-                  className={`px-6 py-4 text-left text-xl font-light text-white hover:no-underline ${tomorrow.className}`}
+                  className={`py-6 text-left text-xl font-light text-white hover:no-underline ${tomorrow.className}`}
                 >
                   Chi possiede il codice e la proprietà intellettuale?
                 </AccordionTrigger>
-                <AccordionContent className={`px-6 pb-6 text-white/80`}>
+                <AccordionContent className={`pb-6 text-white/80`}>
                   Tu mantieni la piena proprietà di tutto il codice, design e
                   contenuti sviluppati durante il progetto. Al completamento, ti
                   forniamo l&apos;accesso completo ai repository di codice e a
@@ -427,14 +429,14 @@ export default function ElevenAuth() {
 
               <AccordionItem
                 value="item-4"
-                className="border border-white/20 px-8 last:border md:px-24"
+                className="rounded-2xl border border-white/20 px-6"
               >
                 <AccordionTrigger
-                  className={`px-6 py-4 text-left text-xl font-light text-white hover:no-underline ${tomorrow.className}`}
+                  className={`py-6 text-left text-xl font-light text-white hover:no-underline ${tomorrow.className}`}
                 >
                   Offrite supporto continuo dopo il lancio?
                 </AccordionTrigger>
-                <AccordionContent className={`px-6 pb-6 text-white/80`}>
+                <AccordionContent className={`pb-6 text-white/80`}>
                   Sì, offriamo diversi livelli di supporto post-lancio. Ogni
                   progetto include un periodo di supporto base per risolvere
                   eventuali problemi iniziali. Per esigenze a lungo termine,
@@ -448,38 +450,40 @@ export default function ElevenAuth() {
         </div>
 
         {/* CTA Section */}
-        <div className="border-b border-white/20 py-16 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <h2
-              className={`mb-6 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
+        <div className="mb-16">
+          <div className="rounded-2xl border border-white p-8 text-center md:p-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
-              Pronto a iniziare?
-            </h2>
-            <p className={`mx-auto mb-8 max-w-2xl text-white/70`}>
-              Contattaci per discutere il tuo progetto e ricevere un preventivo
-              personalizzato. Il primo colloquio di consulenza è gratuito e
-              senza impegno.
-            </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Link href="#contact">
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button
-                    className={`rounded-none bg-white font-light text-black hover:bg-white/90 ${tomorrow.className}`}
+              <h2
+                className={`mb-6 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
+              >
+                Pronto a iniziare?
+              </h2>
+              <p className={`mx-auto mb-8 max-w-2xl text-white/70`}>
+                Contattaci per discutere il tuo progetto e ricevere un
+                preventivo personalizzato. Il primo colloquio di consulenza è
+                gratuito e senza impegno.
+              </p>
+              <div className="flex flex-col justify-center gap-4 sm:flex-row">
+                <Link href="#contact">
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    Richiedi preventivo
-                    <ArrowUpRight viewBox="4 4 16 16" strokeWidth={1} />
-                  </Button>
-                </motion.div>
-              </Link>
-            </div>
-          </motion.div>
+                    <Button
+                      className={`rounded-full bg-white font-light text-black hover:bg-white/90 ${tomorrow.className}`}
+                    >
+                      Richiedi preventivo
+                      <ArrowUpRight viewBox="4 4 16 16" strokeWidth={1} />
+                    </Button>
+                  </motion.div>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>

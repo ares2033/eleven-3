@@ -6,6 +6,7 @@ import React, {
   useState,
   useCallback,
   useMemo,
+  memo,
 } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, type Group } from "three";
 import ThreeGlobe from "three-globe";
@@ -239,7 +240,7 @@ function useGlobeData(data: readonly Position[], pointSize: number) {
  * Optimized Globe component with improved performance and type safety
  * Eliminates drag animations and focuses on smooth rendering
  */
-export const Globe = React.memo<WorldProps>(({ globeConfig, data }) => {
+export const Globe = memo<WorldProps>(({ globeConfig, data }) => {
   const globeRef = useRef<ThreeGlobe | null>(null);
   const groupRef = useRef<Group | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);

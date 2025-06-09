@@ -34,13 +34,11 @@ export default function HomePageClient() {
       {/* Hero section - loads immediately with minimal overhead */}
       <LazyHero />
 
-      {/* Mission section - loads after hero is complete 
+      {/* Mission section - loads after hero is complete  */}
       <LazyMission />
-      */}
 
-      {/* Services section - loads last 
+      {/* Services section - loads last */}
       <LazyServizi />
-      */}
     </>
   );
 }

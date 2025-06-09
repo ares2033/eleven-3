@@ -69,7 +69,7 @@ function ResponsiveHeader(): JSX.Element {
             <SheetTrigger asChild>
               <Button
                 variant="ghost"
-                className="mr-2 px-2 text-center hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
+                className="mr-4 px-4 text-center hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
                 onClick={() => setIsSheetOpen(true)}
               >
                 <Menu
