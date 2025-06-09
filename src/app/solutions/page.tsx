@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Solutions() {
   const [isHovered, setIsHovered] = useState(false);
@@ -292,24 +293,26 @@ export default function Solutions() {
             Contattaci per discutere come possiamo aiutarti a raggiungere i tuoi
             obiettivi.
           </p>
-          <Button
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            size={"lg"}
-            className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:text-white`}
-          >
-            Contattaci
-            <motion.div
-              animate={{ rotate: isHovered ? 45 : 0 }}
-              transition={{ duration: 0.3 }}
+          <Link href="#contact">
+            <Button
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              size={"lg"}
+              className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:text-white`}
             >
-              <ArrowUpRight
-                viewBox="4 4 16 16"
-                strokeWidth={1}
-                className="text-white"
-              />
-            </motion.div>
-          </Button>
+              Contattaci
+              <motion.div
+                animate={{ rotate: isHovered ? 45 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ArrowUpRight
+                  viewBox="4 4 16 16"
+                  strokeWidth={1}
+                  className="text-white"
+                />
+              </motion.div>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

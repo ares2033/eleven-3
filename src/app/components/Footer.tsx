@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Tomorrow } from "next/font/google";
+import Link from "next/link";
 import { useState } from "react";
 
 const tomorrow = Tomorrow({
@@ -75,24 +76,26 @@ function Footer() {
               </div>
             ))}
             <div className="max-w-fit">
-              <Button
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                size={"wide"}
-                className={`hover:bg-accent/20 mb-8 rounded-none border border-black/20 bg-transparent text-lg font-light text-black hover:cursor-pointer hover:text-black ${tomorrow.className}`}
-              >
-                Contattaci
-                <motion.div
-                  animate={{ rotate: isHovered ? 45 : 0 }}
-                  transition={{ duration: 0.3 }}
+              <Link href="/contacts">
+                <Button
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  size={"wide"}
+                  className={`hover:bg-accent/20 mb-8 rounded-none border border-black/20 bg-transparent text-lg font-light text-black hover:cursor-pointer hover:text-black ${tomorrow.className}`}
                 >
-                  <ArrowUpRight
-                    viewBox="4 4 16 16"
-                    strokeWidth={1}
-                    className="text-black transition-colors duration-300"
-                  />
-                </motion.div>
-              </Button>
+                  Contattaci
+                  <motion.div
+                    animate={{ rotate: isHovered ? 45 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ArrowUpRight
+                      viewBox="4 4 16 16"
+                      strokeWidth={1}
+                      className="text-black transition-colors duration-300"
+                    />
+                  </motion.div>
+                </Button>
+              </Link>
             </div>
           </div>
 

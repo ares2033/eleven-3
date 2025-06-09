@@ -14,6 +14,7 @@ import {
   PlusCircle,
   Clock,
 } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function ServiziBento() {
@@ -65,24 +66,26 @@ export default function ServiziBento() {
                     </div>
                   </div>
                 </div>
-                <Button
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  size={"wide"}
-                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
-                >
-                  Scopri di più
-                  <motion.div
-                    animate={{ rotate: isHovered ? 45 : 0 }}
-                    transition={{ duration: 0.3 }}
+                <Link href="/products/elevenauth">
+                  <Button
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    size={"wide"}
+                    className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
                   >
-                    <ArrowUpRight
-                      viewBox="4 4 16 16"
-                      strokeWidth={1}
-                      className="text-white transition-colors duration-300"
-                    />
-                  </motion.div>
-                </Button>
+                    Scopri di più
+                    <motion.div
+                      animate={{ rotate: isHovered ? 45 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ArrowUpRight
+                        viewBox="4 4 16 16"
+                        strokeWidth={1}
+                        className="text-white transition-colors duration-300"
+                      />
+                    </motion.div>
+                  </Button>
+                </Link>
                 <div className="absolute -right-8 -bottom-8 h-32 w-32 rounded-full bg-white/10 blur-2xl"></div>
               </CardContent>
             </MagicCard>
@@ -135,23 +138,25 @@ export default function ServiziBento() {
                     monitoraggio real-time.
                   </p>
                 </div>
-                <Button
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  size={"lg"}
-                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
-                >
-                  <motion.div
-                    animate={{ rotate: isHovered ? 45 : 0 }}
-                    transition={{ duration: 0.3 }}
+                <Link href="/products/elevenboard">
+                  <Button
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    size={"lg"}
+                    className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
                   >
-                    <ArrowUpRight
-                      viewBox="4 4 16 16"
-                      strokeWidth={1}
-                      className="text-white transition-colors duration-300"
-                    />
-                  </motion.div>
-                </Button>
+                    <motion.div
+                      animate={{ rotate: isHovered ? 45 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ArrowUpRight
+                        viewBox="4 4 16 16"
+                        strokeWidth={1}
+                        className="text-white transition-colors duration-300"
+                      />
+                    </motion.div>
+                  </Button>
+                </Link>
               </CardContent>
             </MagicCard>
           </Card>
@@ -192,7 +197,7 @@ export default function ServiziBento() {
           {/* elevenpay Service (2x1) */}
           <Card className="col-span-4 border-0 p-0 md:col-span-2 md:row-span-1">
             <MagicCard className="h-full w-full bg-white">
-              <CardContent className="flex h-full items-center justify-between p-6 text-white">
+              <CardContent className="flex h-full flex-col items-center justify-between p-6 text-white md:flex-row">
                 <div className="flex-1">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="rounded-lg bg-white/20 p-2">
@@ -208,23 +213,25 @@ export default function ServiziBento() {
                     aziendale.
                   </p>
                 </div>
-                <Button
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                  size={"lg"}
-                  className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
-                >
-                  <motion.div
-                    animate={{ rotate: isHovered ? 45 : 0 }}
-                    transition={{ duration: 0.3 }}
+                <Link href="/products/elevenpay">
+                  <Button
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    size={"lg"}
+                    className={`hover:bg-accent/20 mt-8 rounded-full border border-white/20 bg-transparent text-lg font-light text-white hover:cursor-pointer hover:text-white`}
                   >
-                    <ArrowUpRight
-                      viewBox="4 4 16 16"
-                      strokeWidth={1}
-                      className="text-white transition-colors duration-300"
-                    />
-                  </motion.div>
-                </Button>
+                    <motion.div
+                      animate={{ rotate: isHovered ? 45 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ArrowUpRight
+                        viewBox="4 4 16 16"
+                        strokeWidth={1}
+                        className="text-white transition-colors duration-300"
+                      />
+                    </motion.div>
+                  </Button>
+                </Link>
               </CardContent>
             </MagicCard>
           </Card>
@@ -243,15 +250,20 @@ export default function ServiziBento() {
           <Card className="col-span-4 cursor-pointer border-0 p-0 md:col-span-2 md:row-span-1">
             <MagicCard className="h-full w-full border-dashed bg-white">
               <CardContent className="flex h-full flex-col items-center justify-center p-6 text-center">
-                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-                  <PlusCircle className="h-6 w-6 text-gray-600" />
-                </div>
-                <div className={`mb-1 text-sm font-medium text-white`}>
-                  Progetto custom?
-                </div>
-                <div className={`text-xs text-white/80`}>
-                  Parliamone insieme
-                </div>
+                <Link
+                  href="/products/eleven-custom"
+                  className="flex flex-col items-center"
+                >
+                  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
+                    <PlusCircle className="h-6 w-6 text-gray-600" />
+                  </div>
+                  <div className={`mb-1 text-sm font-medium text-white`}>
+                    Progetto custom?
+                  </div>
+                  <div className={`text-xs text-white/80`}>
+                    Parliamone insieme
+                  </div>
+                </Link>
               </CardContent>
             </MagicCard>
           </Card>
@@ -268,24 +280,26 @@ export default function ServiziBento() {
           >
             Contattaci per una soluzione su misura per la tua azienda
           </p>
-          <Button
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            size={"lg"}
-            className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:cursor-pointer hover:text-white`}
-          >
-            Contattaci
-            <motion.div
-              animate={{ rotate: isHovered ? 45 : 0 }}
-              transition={{ duration: 0.3 }}
+          <Link href="#contact">
+            <Button
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              size={"lg"}
+              className={`hover:bg-accent/20 mt-6 rounded-full border border-white/20 bg-transparent text-sm font-light text-white hover:cursor-pointer hover:text-white`}
             >
-              <ArrowUpRight
-                viewBox="4 4 16 16"
-                strokeWidth={1}
-                className="text-white"
-              />
-            </motion.div>
-          </Button>
+              Contattaci
+              <motion.div
+                animate={{ rotate: isHovered ? 45 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ArrowUpRight
+                  viewBox="4 4 16 16"
+                  strokeWidth={1}
+                  className="text-white"
+                />
+              </motion.div>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

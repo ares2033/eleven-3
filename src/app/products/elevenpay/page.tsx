@@ -48,18 +48,18 @@ export default function Elevenpay() {
 
         {/* Description Section */}
         <div className="mb-16">
-          <div className="rounded-2xl bg-white p-8 md:p-16">
+          <div className="rounded-2xl p-8 md:p-16">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
               <h2
-                className={`mb-8 text-2xl font-light text-black md:text-3xl ${tomorrow.className}`}
+                className={`mb-8 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
               >
                 Pagamenti digitali semplici, sicuri e globali
               </h2>
-              <div className={`space-y-6 text-black/80`}>
+              <div className={`space-y-6 text-white/80`}>
                 <p className="text-lg leading-relaxed">
                   ElevenPay è la piattaforma di pagamento completa che permette
                   al tuo business di accettare, processare e gestire transazioni
@@ -139,26 +139,26 @@ export default function Elevenpay() {
 
         {/* Process Section */}
         <div className="mb-16">
-          <div className="rounded-2xl bg-white p-8 md:p-16">
+          <div className="rounded-2xl p-8 md:p-16">
             <h2
-              className={`mb-12 text-center text-2xl font-light text-black md:text-3xl ${tomorrow.className}`}
+              className={`mb-12 text-center text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
             >
               Come funziona
             </h2>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <FileText className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <FileText className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     1. Integrazione Rapida
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Integra ElevenPay nel tuo sito o app in pochi minuti
                   utilizzando le nostre API RESTful o SDK pre-costruiti.
                   Supportiamo tutti i principali linguaggi di programmazione e
@@ -166,18 +166,18 @@ export default function Elevenpay() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <Shield className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <Shield className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     2. Configurazione Sicurezza
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Configuri i livelli di sicurezza secondo le tue esigenze: 3D
                   Secure, verifica CVV, controlli antifrode personalizzati.
                   Tutti i dati sono crittografati secondo standard PCI DSS Level
@@ -185,21 +185,21 @@ export default function Elevenpay() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
                     <CreditCard
-                      className="h-6 w-6 text-black"
+                      className="h-6 w-6 text-white"
                       strokeWidth={1}
                     />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     3. Processamento Pagamenti
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   I pagamenti vengono processati istantaneamente attraverso la
                   nostra rete globale di partner bancari. Routing intelligente
                   assicura il tasso di successo più alto e le commissioni più
@@ -207,18 +207,18 @@ export default function Elevenpay() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <Zap className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <Zap className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     4. Gestione e Analytics
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Monitora tutte le transazioni dal dashboard centralizzato,
                   gestisci rimborsi, analizza le performance e ottimizza i tassi
                   di conversione. Report automatici e riconciliazione contabile

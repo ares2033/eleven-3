@@ -119,7 +119,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <section id="contact-page" className="container mx-auto px-4 py-16">
+    <section id="contact-page" className="container px-4 py-16">
       {/* Hero Section */}
       <div className="w-full py-24">
         <div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
       </div>
 
       {/* Contact Methods */}
-      <div className="mb-20 px-4 lg:px-48">
+      <div className="mb-20 px-4">
         <h2
           className={`mb-16 text-center text-3xl font-light text-white md:text-4xl`}
         >
@@ -183,12 +183,14 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <Button
-                    className={`w-full rounded-full border border-white/20 bg-transparent font-light text-white transition-all duration-300 hover:bg-white hover:text-black`}
-                  >
-                    {method.action}
-                    <ArrowUpRight viewBox="4 4 16 16" strokeWidth={1} />
-                  </Button>
+                  <Link href="#contact">
+                    <Button
+                      className={`w-full cursor-pointer rounded-full border border-white/20 bg-transparent font-light text-white transition-all duration-300 hover:bg-white hover:text-black`}
+                    >
+                      {method.action}
+                      <ArrowUpRight viewBox="4 4 16 16" strokeWidth={1} />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -197,7 +199,7 @@ export default function ContactPage() {
       </div>
 
       {/* FAQ Section */}
-      <div className="mb-20 px-4 lg:px-48">
+      <div className="mb-20 px-4">
         <h2
           className={`mb-16 text-center text-3xl font-light text-white md:text-4xl`}
         >
@@ -227,7 +229,7 @@ export default function ContactPage() {
       </div>
 
       {/* Testimonials */}
-      <div className="mb-20 px-4 lg:px-48">
+      <div className="mb-20 px-4">
         <h2
           className={`mb-16 text-center text-3xl font-light text-white md:text-4xl`}
         >
@@ -263,7 +265,7 @@ export default function ContactPage() {
       </div>
 
       {/* Company Info */}
-      <div className="mb-20 px-4 lg:px-48">
+      <div className="mb-20 px-4">
         <div className="grid gap-12 md:grid-cols-2">
           <div className="rounded-2xl border border-white p-8">
             <h2 className={`mb-6 text-2xl font-light text-white md:text-3xl`}>

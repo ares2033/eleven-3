@@ -48,18 +48,18 @@ export default function Elevenboard() {
 
         {/* Description Section */}
         <div className="mb-16">
-          <div className="rounded-2xl bg-white p-8 md:p-16">
+          <div className="rounded-2xl p-8 md:p-16">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
               <h2
-                className={`mb-8 text-2xl font-light text-black md:text-3xl ${tomorrow.className}`}
+                className={`mb-8 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
               >
                 Il centro di controllo per il tuo business digitale
               </h2>
-              <div className={`space-y-6 text-black/80`}>
+              <div className={`space-y-6 text-white/80`}>
                 <p className="text-lg leading-relaxed">
                   ElevenBoard è la piattaforma di business intelligence
                   progettata per dare visibilità completa sui tuoi dati
@@ -138,26 +138,26 @@ export default function Elevenboard() {
 
         {/* Process Section */}
         <div className="mb-16">
-          <div className="rounded-2xl bg-white p-8 md:p-16">
+          <div className="rounded-2xl p-8 md:p-16">
             <h2
-              className={`mb-12 text-center text-2xl font-light text-black md:text-3xl ${tomorrow.className}`}
+              className={`mb-12 text-center text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
             >
               Come funziona
             </h2>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <Database className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <Database className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     1. Connessione Dati
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Colleghiamo ElevenBoard alle tue fonti dati esistenti: CRM,
                   e-commerce, social media, database interni e servizi cloud. La
                   configurazione è semplice e sicura, con connettori pre-built
@@ -165,18 +165,18 @@ export default function Elevenboard() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <Settings className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <Settings className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     2. Configurazione Dashboard
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Personalizzi la tua dashboard scegliendo i KPI più importanti
                   per il tuo business. L&apos;interfaccia drag & drop ti
                   permette di organizzare widget, grafici e tabelle secondo le
@@ -184,21 +184,21 @@ export default function Elevenboard() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
                     <TrendingUp
-                      className="h-6 w-6 text-black"
+                      className="h-6 w-6 text-white"
                       strokeWidth={1}
                     />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     3. Monitoraggio Real-time
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   I tuoi dati vengono aggiornati automaticamente e visualizzati
                   in tempo reale. Ricevi notifiche immediate quando i KPI
                   superano le soglie impostate, permettendoti di reagire
@@ -206,18 +206,18 @@ export default function Elevenboard() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <BarChart3 className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <BarChart3 className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     4. Insights e Reporting
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Genera report dettagliati con un click e condividili con il
                   tuo team. L&apos;AI integrata identifica trend e anomalie,
                   suggerendo azioni concrete per ottimizzare le performance del

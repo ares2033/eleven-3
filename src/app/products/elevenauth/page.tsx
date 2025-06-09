@@ -48,18 +48,18 @@ export default function ElevenAuth() {
 
         {/* Description Section */}
         <div className="mb-16">
-          <div className="rounded-2xl bg-white p-8 md:p-16">
+          <div className="rounded-2xl p-8 md:p-16">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
               <h2
-                className={`mb-8 text-2xl font-light text-black md:text-3xl ${tomorrow.className}`}
+                className={`mb-8 text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
               >
                 La soluzione completa per il tuo progetto digitale
               </h2>
-              <div className={`space-y-6 text-black/80`}>
+              <div className={`space-y-6 text-white/80`}>
                 <p className="text-lg leading-relaxed">
                   ElevenAuth è il nostro pacchetto completo progettato per
                   trasformare la tua visione in un prodotto digitale funzionante
@@ -138,26 +138,26 @@ export default function ElevenAuth() {
 
         {/* Process Section */}
         <div className="mb-16">
-          <div className="rounded-2xl bg-white p-8 md:p-16">
+          <div className="rounded-2xl p-8 md:p-16">
             <h2
-              className={`mb-12 text-center text-2xl font-light text-black md:text-3xl ${tomorrow.className}`}
+              className={`mb-12 text-center text-2xl font-light text-white md:text-3xl ${tomorrow.className}`}
             >
               Il nostro processo
             </h2>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <FileText className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <FileText className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     1. Analisi e Pianificazione
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Iniziamo con un&apos;analisi approfondita delle tue esigenze e
                   obiettivi. Definiamo insieme il perimetro del progetto,
                   identifichiamo le funzionalità chiave e creiamo una roadmap
@@ -167,18 +167,18 @@ export default function ElevenAuth() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <Users className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <Users className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     2. Design e Prototipazione
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Creiamo wireframe e prototipi interattivi che visualizzano
                   l&apos;interfaccia utente e il flusso di navigazione. Questo
                   ti permette di vedere e testare il prodotto prima che venga
@@ -188,18 +188,18 @@ export default function ElevenAuth() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <Code className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <Code className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     3. Sviluppo e Testing
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Implementiamo il tuo prodotto utilizzando tecnologie moderne e
                   scalabili. Adottiamo un approccio iterativo con cicli di
                   sviluppo brevi che ti permettono di vedere i progressi
@@ -209,18 +209,18 @@ export default function ElevenAuth() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-black/20 p-8">
+              <div className="rounded-2xl border border-white/20 p-8">
                 <div className="mb-6 flex items-center">
-                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-black/20">
-                    <Zap className="h-6 w-6 text-black" strokeWidth={1} />
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full border border-white/20">
+                    <Zap className="h-6 w-6 text-white" strokeWidth={1} />
                   </div>
                   <h3
-                    className={`text-xl font-light text-black ${tomorrow.className}`}
+                    className={`text-xl font-light text-white ${tomorrow.className}`}
                   >
                     4. Lancio e Supporto
                   </h3>
                 </div>
-                <p className={`text-black/80`}>
+                <p className={`text-white/80`}>
                   Gestiamo il processo di deployment e configuriamo
                   l&apos;infrastruttura necessaria per il lancio. Dopo il
                   rilascio, forniamo supporto tecnico per risolvere eventuali
